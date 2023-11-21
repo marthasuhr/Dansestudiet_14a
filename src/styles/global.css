@@ -1,0 +1,102 @@
+:root {
+  /* Farver */
+
+  --primary-blue: #196472;
+  --primary-red: #e6253c;
+  --primary-yellow: #ffe000;
+  --secondary-blue: #86c3c3;
+  --secondary-red: #ffbbb9;
+  --secondary-yellow: #ffeda0;
+  --tertiary-blue: #e6f1f1;
+  --tertiary-red: #ffeeee;
+  --tertiary-yellow: #fff8e1;
+  --tertiary-grey: #efefef;
+
+  /*Typografi*/
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --black: 900;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--primary-blue);
+  color: var(--tertiary-grey);
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  max-width: 2000px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+section {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Typografi */
+  h1 {
+    font-size: 40px;
+    font-weight: var(--bold);
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: var(--bold);
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: var(--medium);
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: var(--bold);
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: var(--regular);
+    line-height: 120%;
+  }
+
+  .p_bold {
+    font-size: 17px;
+    font-weight: var(--bold);
+  }
+
+  button {
+    font-size: 20px;
+    font-weight: var(--light);
+    font-family: "Prompt", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .citat {
+    font-size: 38px;
+    font-weight: var(--regular);
+    font-style: italic;
+    color: var(--secondary3);
+  }
+}

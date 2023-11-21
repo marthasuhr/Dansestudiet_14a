@@ -1,7 +1,51 @@
 ---
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+
 ---
+
+
+
+<Layout>
+
+
+<section class="forside_1" >
+	<h1>DANSESTUDIET</h1>
+
+	<div class="linje"></div>
+<p>VI HAR MERE END 50 DANSEKLASSER OM UGEN FOR ALLE ALDRE OG NIVEAUER!</p>
+	<Button variant="Primary_Default" size="Small" > SE SKEMA HER</Button>
+</section>
+
+<section class="forside_2">
+	<img src="/img/figur1.png" alt="dansefigur">
+	<h2>Vores unikke team underviser i</h2>
+	<h3>Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance, Fusion Contemporary, Yoga, Waacking, Workshops m.m.</h3>
+	<Button variant="Secondary_Default" size="Small"> MØD DEM HER</Button>
+</section>
+
+</Layout>
+
 <style>
 
+	.linje{
+  border-bottom: 1px solid #ffffff;
+   width: 100px;
+	}
+
+	.forside_1{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+	
+	}
+.forside_2{
+	background-color: var(--secondary-yellow);
+}
 	h2{
 color: var(--color-secondary-yellow, #FFEDA0);
 text-align: center;
