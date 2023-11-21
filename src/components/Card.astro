@@ -1,0 +1,71 @@
+---
+const { titel, underviser, dato, tid } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<div>
+  <div class="placeholder">
+    <h4 class="navn">{titel}</h4>
+    <div class="linje"></div>
+    <p>{underviser}</p>
+    <p>{dato}</p>
+    <p>{tid}</p>
+    <Button variant="Secondary_Default">SE SKEMA HER</Button>
+  </div>
+</div>
+
+<style>
+h4,p{
+    color: var(--primary-blue);
+}
+.linje{
+   
+  border-bottom: 1px solid var(--primary-blue);
+   width: 300px;
+   height: 2px;
+
+	}
+
+  
+  .placeholder {
+ background-color: var(--secondary-blue);
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 29px;
+padding: 29px 13px 29px 13px;
+margin-bottom: 1rem;
+    /*
+width: 338px;
+height: 411px;
+flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-blue);
+   padding: 1.8rem ;
+gap: 29px
+*/
+    
+  }
+
+
+
+
+  @media (min-width: 900px) {
+  
+    .placeholder {
+    display: flex;
+width: 532px;
+height: 428px;
+
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+padding: 40px 38px 40px 38px;
+margin-bottom: 1rem;
+    }
+
+
+   
+  }
+</style>

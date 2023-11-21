@@ -4,13 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 
 ---
 
 
 
 <Layout>
-
+ 
+	
 
 <section class="forside_1" >
 	<h1>DANSESTUDIET</h1>
@@ -18,22 +20,53 @@ import Button from "../components/Button.astro";
 	<div class="linje"></div>
 <p>VI HAR MERE END 50 DANSEKLASSER OM UGEN FOR ALLE ALDRE OG NIVEAUER!</p>
 	<Button variant="Primary_Default" size="Small" > SE SKEMA HER</Button>
+	<img src="/img/vector-2.svg" alt="pil">
 </section>
 
 <section class="forside_2">
-	<img src="/img/figur1.png" alt="dansefigur">
+
+		<div>
+	<img class="figur1" src="/img/figur1.png" alt="dansefigur"></div>
+	<div class="tekst_align" >
 	<h2>Vores unikke team underviser i</h2>
-	<h3>Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance, Fusion Contemporary, Yoga, Waacking, Workshops m.m.</h3>
+	<h3 >Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance, Fusion Contemporary, Yoga, Waacking, Workshops m.m.</h3>
 	<Button variant="Secondary_Default" size="Small"> MØD DEM HER</Button>
+	</div>
+
+</section>
+
+<section  >
+<h2 class="h2_gul">KOMMENDE BEGIVENHEDER</h2>
+<div class="forside_3">
+	<div>
+	<Card titel="MÅNEDENS WORKSHOP" underviser="Commercial performance med Anna Zacho" dato="SØNDAG 10/12/23" tid="KL 14-16"/>
+	<Card titel="MOVEMENT LAB" underviser="Movement lab med Sofie Lasorella" dato="LØRDAG 3/2/24 & SØNDAG 4/2/24" tid="KL 13-16" />
+	</div>
+	<div>
+		<img class="figur2"src="/img/figur2.png" alt="figur2">
+	</div>
+	</div>
+</section>
+
+<section class="forside_4">
+	<h5>FØLG OS!</h5>
+
+<div class="ikoner">
+<img src="img/instagram.svg" alt="instagram">
+<img src="img/facebook.svg" alt="facebook">
+</div>
 </section>
 
 </Layout>
 
 <style>
 
+.figur1, .figur2{
+	display: none;
+}
 	.linje{
   border-bottom: 1px solid #ffffff;
-   width: 100px;
+   width: 400px;
 	}
 
 	.forside_1{
@@ -41,19 +74,70 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 1rem;
+gap: 3rem;
+margin: 2rem;
 	
 	}
 .forside_2{
 	background-color: var(--secondary-yellow);
+	padding: 2rem 3rem 2rem 3rem;
+
+
 }
-	h2{
-color: var(--color-secondary-yellow, #FFEDA0);
+.forside_4{
 text-align: center;
-font-family: Prompt;
-font-size: 55px;
-font-style: normal;
-font-weight: 300;
-line-height: 30.586px; /* 55.611% */
 }
+
+.ikoner{
+	display: flex;
+	flex-direction: row;
+
+	place-content: center;
+}
+	.h2_gul{
+		color: var(--secondary-yellow);
+	}
+
+	.tekst_align {
+text-align: center;}
+
+
+ @media (min-width: 900px) {
+
+
+	.linje{
+  border-bottom: 1px solid #ffffff;
+   width: 1000px;
+	}
+.figur1 {
+		  width: 40%;
+  height: auto;
+	display: block;
+}
+
+.figur2 {
+	  width: 40%;
+  height: auto;
+  display: block;
+
+  
+}
+
+.forside_2{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.forside_3{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.tekst_align {
+text-align: right;
+
+}
+    }
+
+
 
 </style>
