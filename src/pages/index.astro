@@ -19,7 +19,7 @@ import Card from "../components/Card.astro";
 
 	<div class="linje"></div>
 <p>VI HAR MERE END 50 DANSEKLASSER OM UGEN FOR ALLE ALDRE OG NIVEAUER!</p>
-	<Button variant="Primary_Default" size="Small" > SE SKEMA HER</Button>
+	<Button variant="Primary" size="Large" > SE SKEMA HER</Button>
 	<img src="/img/vector-2.svg" alt="pil">
 </section>
 
@@ -28,15 +28,15 @@ import Card from "../components/Card.astro";
 		<div>
 	<img class="figur1" src="/img/figur1.png" alt="dansefigur"></div>
 	<div class="tekst_align" >
-	<h2>Vores unikke team underviser i</h2>
-	<h3 >Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance, Fusion Contemporary, Yoga, Waacking, Workshops m.m.</h3>
-	<Button variant="Secondary_Default" size="Small"> MØD DEM HER</Button>
+	<h2 class="tekst_align_h2" >Vores unikke team underviser i</h2>
+	<h3 class="tekst_align_h3" >Experimental Contemporary, <br> Afro, House, Street Jazz, <br> Commercial Femme, Hip Hop, <br> Ballet, Moderne Dans, <br> Smidighedstræning, House, <br> Breakdance, Fusion <br> Contemporary, Yoga, <br> Waacking, Workshops m.m.</h3>
+	<Button variant="Secondary" size="Large"> MØD DEM HER</Button>
 	</div>
 
 </section>
 
 <section  >
-<h2 class="h2_gul">KOMMENDE BEGIVENHEDER</h2>
+<h2 class="h2_gul">KOMMENDE <br> BEGIVENHEDER</h2>
 <div class="forside_3">
 	<div>
 	<Card titel="MÅNEDENS WORKSHOP" underviser="Commercial performance med Anna Zacho" dato="SØNDAG 10/12/23" tid="KL 14-16"/>
@@ -49,7 +49,7 @@ import Card from "../components/Card.astro";
 </section>
 
 <section class="forside_4">
-	<h5>FØLG OS!</h5>
+	<h3 class="h3_lys" >FØLG OS!</h3>
 
 <div class="ikoner">
 <img src="img/instagram.svg" alt="instagram">
@@ -60,7 +60,9 @@ import Card from "../components/Card.astro";
 </Layout>
 
 <style>
-
+.h3_lys{
+	color: var(--tertiary-grey);
+}
 .figur1, .figur2{
 	display: none;
 }
@@ -82,7 +84,6 @@ margin: 2rem;
 	background-color: var(--secondary-yellow);
 	padding: 2rem 3rem 2rem 3rem;
 
-
 }
 .forside_4{
 text-align: center;
@@ -96,12 +97,18 @@ text-align: center;
 }
 	.h2_gul{
 		color: var(--secondary-yellow);
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+
 	}
 
 	.tekst_align {
 text-align: center;}
 
+.tekst_align_h2{
 
+	padding-bottom: 1rem;
+}
  @media (min-width: 900px) {
 
 
@@ -110,30 +117,60 @@ text-align: center;}
    width: 1000px;
 	}
 .figur1 {
-		  width: 40%;
-  height: auto;
+	width: 391px;
+height: 609px;
+flex-shrink: 0;
+		 /* width: 40%;
+  height: auto;*/
 	display: block;
+	padding-top: 30px;
+
 }
 
 .figur2 {
-	  width: 40%;
-  height: auto;
+	 /* width: 40%;
+  height: auto;*/
+  width: 287px;
+height: 880px;
+top: 1840px;
+left: 834px;
   display: block;
+margin-left: 164px;
 
-  
 }
 
+
+.forside_1{
+
+	padding-top: 93px;
+
+}
 .forside_2{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
+		padding-top: 93px;
+
+height: 782px;
+
 }
 .forside_3{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+padding-top: 73px;
 }
 
 .tekst_align {
 text-align: right;
+
+}
+
+.tekst_align_h2{
+	padding-bottom: 2rem;
+}
+
+
+.tekst_align_h3{
+	padding-bottom: 90px;
 
 }
     }

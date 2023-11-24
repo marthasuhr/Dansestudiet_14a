@@ -4,36 +4,57 @@ import Button from "./Button.astro";
 ---
 
 <div>
-  <div class="placeholder">
-    <h4 class="navn">{titel}</h4>
+  <div class="event">
+    <h3 class="navn">{titel}</h3>
     <div class="linje"></div>
     <p>{underviser}</p>
-    <p>{dato}</p>
-    <p>{tid}</p>
-    <Button variant="Secondary_Default">SE SKEMA HER</Button>
+    <div class="tidspunkt">
+    <p class="stor_p">{dato}</p>
+    <p class="stor_p" >{tid}</p>
+    </div>
+    <Button variant="Secondary" size="Large">SE SKEMA HER</Button>
   </div>
 </div>
 
 <style>
-h4,p{
+
+.tidspunkt{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stor_p{
     color: var(--primary-blue);
+font-weight: 400;
+line-height: 2;
+letter-spacing: 4px;
+text-transform: uppercase;
+}
+
+p{
+  color: var(--primary-blue);
+font-weight: 500;
+line-height: 17.192px; /* 114.613% */
+letter-spacing: 1.5px;
+height: 3rem;
+margin-top: 1rem;
 }
 .linje{
    
   border-bottom: 1px solid var(--primary-blue);
-   width: 300px;
-   height: 2px;
+   width: 10rem;
+   height: 0.5rem;
+   margin-bottom: 1rem;
+
 
 	}
-
-  
-  .placeholder {
+  .event {
  background-color: var(--secondary-blue);
     display: flex;
 flex-direction: column;
 align-items: center;
-gap: 29px;
-padding: 29px 13px 29px 13px;
+
+padding: 2.5rem 1rem 2.5rem 1rem;
 margin-bottom: 1rem;
     /*
 width: 338px;
@@ -47,25 +68,35 @@ gap: 29px
 */
     
   }
-
-
-
-
   @media (min-width: 900px) {
+
+    .linje{
+      margin-top: 1rem;
+         width: 30rem;
+    }
   
-    .placeholder {
+    .event {
     display: flex;
 width: 532px;
 height: 428px;
-
 justify-content: center;
 align-items: center;
 flex-shrink: 0;
-padding: 40px 38px 40px 38px;
-margin-bottom: 1rem;
+
     }
 
+.stor_p{
 
+font-weight: 400;
+line-height: 2;
+letter-spacing: 6px;
+text-transform: uppercase;
+
+}
    
+p{
+line-height: 2;
+letter-spacing: 0.5rem;
+}
   }
 </style>

@@ -7,64 +7,82 @@ const { variant, size } = Astro.props;
 </button>
 
 <style>
+  
   button {
     border-radius: 0px;
     border: none;
   }
 
   /* Variants */
-  [data-variant="Primary_Default"] {
-    background: var(--tertiary-grey);
+  [data-variant="Primary"] {
+
     color: var(--primary-blue);
-border: 3px solid var(--primary-blue, #196472);
+border: 2px solid var(--primary-blue, #196472);
+background: var(--tertiary-grey, #EFEFEF);
     border-style: double;
   }
-  [data-variant="Primary_Default"]:hover {
+  [data-variant="Primary"]:hover {
     background: var(--secondary-yellow);
     color: var(--primary-blue);
     border-color: var(--primary-blue);
     border-style: double;
   }
 
-   [data-variant="Secondary_Default"] {
-    background: var(--tertiary-grey);
+   [data-variant="Secondary"] {
+   background:  var(--primary-blue);
+    color: var(--tertiary-grey);
+    border-color: var(--tertiary-grey);
+    border-style: double;
+  }
+  [data-variant="Secondary"]:hover {
+   background: var(--secondary-blue);
     color: var(--primary-blue);
 border: 3px solid var(--primary-blue);
     border-style: double;
   }
-  [data-variant="Secondary_Default"]:hover {
-    background: var(--secondary-blue);
+
+/*   [data-variant="Tertiary_Default"] {
+    
+     background:  var(--primary-blue);
     color: var(--tertiary-grey);
-    border-color: var(--primary-blue);
+    border-color: var(--tertiary-grey);
     border-style: double;
   }
-
+  [data-variant="Tertiary_Default"]:hover {
+   background: var(--secondary-blue)
+    color: var(--primary-blue);
+border: 3px solid var(--primary-blue);
+    border-style: double;
+    
+  } */
 
   /* Sizes */
-  [data-size="Small"] {
+  /*[data-size="Small"] {
     padding: 0.6rem;
     padding-left: 2rem;
     padding-right: 2rem;
-  }
+  } */ 
+
   [data-size="Large"] {
     padding: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 15px;
   }
 
   @media (min-width: 900px) {
   
-    [data-size="lille"] {
-      padding: 0.8rem;
+   /* [data-size="Small"] {
+
       padding-left: 2rem;
       padding-right: 2rem;
-    }
-    [data-size="stor"] {
-      font-weight: var(--regular);
+    } */
+    [data-size="Large"] {
+    
       font-size: 24px;
-      padding: 1.8rem;
-      padding-left: 4rem;
-      padding-right: 4rem;
+    
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 </style>
